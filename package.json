@@ -22,12 +22,10 @@
     "@tailwindcss/postcss": "^4.1.10",
     "git": "^0.1.5",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.2"
+    "react-dom": "^19.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "Paucek-and-Lage_Burger"
+    "url": "https://github.com/theamangaget/Paucek-and-Lage-Burger.git"
   }
-  
 }
