@@ -1,0 +1,31 @@
+{
+  "name": "burger-food-ordering-site",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aman Kumar",
+  "license": "ISC",
+  "description": "This is a food ordering website",
+  "devDependencies": {
+    "init": "^0.1.2",
+    "npx": "^10.2.2",
+    "parcel": "^2.15.2",
+    "postcss": "^8.5.5",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^4.1.10"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.10",
+    "git": "^0.1.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Paucek-and-Lage_Burger"
+  }
+}

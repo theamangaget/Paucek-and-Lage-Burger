@@ -1,0 +1,923 @@
+/* Modern Swiggy-like Styling */
+
+/* Base Styles */
+
+
+/* Ensure card content does not overflow */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 100px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.online-status {
+  font-size: 1rem;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.Logo-container {
+  padding: 0;              /* Remove extra vertical padding */
+  display: flex;
+  align-items: center;
+  height: 100px;           /* Match header height for vertical centering */
+}
+
+.Logo {
+  width: 130px;
+  height: 100px;            /* Adjust height for better fit */
+  object-fit: contain;
+  display: block;
+  margin: 0 0 0 8px;       /* Optional: add a little left margin if needed */
+}
+
+.theme-toggle-btn {
+  margin-left: 18px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #fc8019;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-toggle-btn:hover {
+  background: #23272f;
+  color: #fc8019;
+  border: 1.5px solid #fc8019;
+}
+
+.nav-items > ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3d4152;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-items > ul > li:hover {
+  color: #fc8019;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-box {
+    padding: 8px 14px;
+    border: 1.5px solid #fc8019;
+    border-radius: 6px 0 0 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.2s;
+    background: #fff;
+}
+
+.search-box:focus {
+    border-color: #ffae6d;
+}
+
+.search-btn {
+    padding: 8px 18px;
+    border: solid;
+    border-radius: 0 6px 6px 0;
+    background-color: #fc8019;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 8px rgba(252, 128, 25, 0.08);
+}
+
+.search-btn:hover {
+    background-color: #ffae6d;
+    color: #fff;
+    border-color: #fc8019;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 16px 0;
+    padding: 0 20px;
+}
+.filter-btn {
+    margin-left: auto;
+    padding: 8px 18px;
+    border: solid;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #fc8019;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 8px rgba(252, 128, 25, 0.08);
+}
+
+.filter-btn:hover {
+    background-color: #fc8019;
+    color: #fff;
+}
+
+/* Restaurant Container */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+  justify-content: center;      /* Center cards horizontally */
+  align-items: flex-start;   /*   Align cards to the top */
+  margin-left: auto;            /* Center the container itself */
+  margin-right: auto;
+}
+
+/* Restaurant Card */
+.res-card {
+  width: 220px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.res-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.res-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.res-card h3 {
+  margin: 12px 12px 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3d4152;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.res-card h5 {
+  margin: 0 12px 6px;
+  font-size: 14px;
+  color: #686b78;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.res-card h5:nth-of-type(1) {
+  color: #535665;
+  font-size: 13px;
+}
+
+.res-card h5:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  color: #3d9b6d;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.res-card h5:nth-of-type(2)::before {
+  content: "★";
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.res-card h6 {
+  margin: 0 12px 12px;
+  font-size: 12px;
+  color: #686b78;
+  font-weight: 300;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: #fc8019;
+    color: white;
+    transition: all 0.3s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: flex-start;
+}
+
+.Shimmer-card {
+    width: 220px;
+    height: 300px;
+    background: linear-gradient(
+        90deg,
+        #fff3e6 25%,
+        #ffe0c2 50%,
+        #fff3e6 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite linear;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(252, 128, 25, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -220px 0;
+    }
+    100% {
+        background-position: 220px 0;
+    }
+}
+/* Optional: Add a shimmer logo placeholder */
+.Shimmer-card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(
+        90deg,
+        #ffe0c2 25%,
+        #fff3e6 50%,
+        #ffe0c2 75%
+    );
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 12px;
+    animation: shimmer 1.2s infinite linear;
+}
+
+/* Optional: Add shimmer lines for text placeholders */
+.Shimmer-card .shimmer-line {
+    height: 16px;
+    width: 80%;
+    margin: 12px auto 0 auto;
+    background: linear-gradient(
+        90deg,
+        #ffe0c2 25%,
+        #fff3e6 50%,
+        #ffe0c2 75%
+    );
+    border-radius: 8px;
+    animation: shimmer 1.2s infinite linear;
+}
+.Shimmer-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 16px 0;
+    padding: 0 20px;
+}
+
+.Shimmer-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shimmer-search-box {
+    width: 180px;
+    height: 36px;
+    border-radius: 6px 0 0 6px;
+    background: linear-gradient(90deg, #fff3e6 25%, #ffe0c2 50%, #fff3e6 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite linear;
+}
+
+.shimmer-search-btn {
+    width: 80px;
+    height: 36px;
+    border-radius: 0 6px 6px 0;
+    background: linear-gradient(90deg, #fff3e6 25%, #ffe0c2 50%, #fff3e6 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite linear;
+}
+
+.shimmer-filter-btn {
+    width: 180px;
+    height: 36px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #fff3e6 25%, #ffe0c2 50%, #fff3e6 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite linear;
+}
+
+
+.Shimmer-card .shimmer-line.short {
+    width: 60%;
+    height: 12px;
+    margin-top: 8px;
+}
+.login {
+    margin-left: 16px;
+    padding: 8px 18px;
+    cursor: pointer;
+    border: solid;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #fc8019;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(252, 128, 25, 0.08);
+    align-self: center;
+    height: 40px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.login:hover {
+    background-color: #fc8019;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.Link a {
+    color: inherit;         /* Use the parent color */
+    text-decoration: none;  /* Remove underline */
+    font: inherit;          /* Inherit font styles */
+    cursor: pointer;        /* Optional: show pointer on hover */
+}
+/* ...existing code... */
+
+/* --- RestaurantMenu Enhanced Styling --- */
+
+.menu {
+  max-width: 700px;
+  margin: 48px auto 48px auto;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(40, 44, 63, 0.13);
+  padding: 40px 48px 32px 48px;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu h1 {
+  font-size: 2.5rem;
+  color: #282c3f;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(252,128,25,0.06);
+}
+
+.menu p {
+  color: #686b78;
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+}
+
+.menu h2 {
+  font-size: 1.18rem;
+  color: #282c3f;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-left: 4px solid #fc8019;
+  padding-left: 12px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  display: inline-block;
+  letter-spacing: 0.2px;
+}
+
+.menu-details {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 18px;
+  margin-top: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-detail {
+  background: #fff7ef;
+  border: 1.5px solid #fc8019;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-size: 1.08rem;
+  color: #fc8019;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(252,128,25,0.06);
+  margin-right: 8px;
+}
+
+.menu-detail .icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px 0;
+}
+
+.menu ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f5;
+  font-size: 1.08rem;
+  color: #535665;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+  background: transparent;
+}
+
+.menu ul li:last-child {
+  border-bottom: none;
+}
+
+.menu ul li::before {
+  content: "🍽️";
+  margin-right: 10px;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.menu ul.cuisines-list li::before {
+  content: "🥗";
+}
+
+.menu ul.menu-items-list li::before {
+  content: "🍔";
+}
+
+.menu ul.menu-items-list li span {
+  margin-left: auto;
+  color: #fc8019;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.menu ul.menu-items-list li:hover {
+  background: #fff7ef;
+  border-radius: 6px;
+  color: #fc8019;
+  transition: all 0.2s;
+}
+
+.menu ul.cuisines-list li {
+  background: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  padding-left: 8px;
+}
+
+.menu ul.cuisines-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    padding: 18px 6px;
+  }
+  .menu h1 {
+    font-size: 1.3rem;
+  }
+  .menu h2 {
+    font-size: 1rem;
+  }
+  .menu-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu-detail {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+.user-card {
+    width: 220px;
+    height: 300px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px 12px 12px;
+    position: relative;
+    box-sizing: border-box;
+    /* Remove justify-content and padding-bottom */
+}
+
+.user-card h2 {
+    margin: 8px 0 0 0;
+    z-index: 1;
+    background: white;
+    width: 100%;
+    /* text-align: center; */
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.user-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0 0 12px 12px;
+    margin-top: auto; /* Pushes image to the bottom */
+    display: block;
+}
+.user-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+/* ------------------- DARK MODE ------------------- */
+body.dark-mode {
+  background-color: #23272f;
+  color: #e3e3e3;
+}
+
+body.dark-mode .header {
+  background: #23272f;
+  color: #e3e3e3;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .nav-items > ul > li {
+  color: #e3e3e3;
+}
+body.dark-mode .nav-items > ul > li:hover {
+  color: #fc8019;
+}
+
+body.dark-mode .Logo-container {
+  background: transparent;
+}
+
+body.dark-mode .res-card,
+body.dark-mode .user-card,
+body.dark-mode .menu {
+  background: #23272f;
+  color: #e3e3e3;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+/* Only change text color, not background, for headings/details */
+body.dark-mode .res-card h3,
+body.dark-mode .res-card h5,
+body.dark-mode .res-card h6,
+body.dark-mode .user-card h2,
+body.dark-mode .menu h1,
+body.dark-mode .menu h2,
+body.dark-mode .menu-detail {
+  color: #0b0b0b;
+  /* background: #e3e3e3; */
+  background: transparent;
+  
+}
+
+body.dark-mode .res-logo,
+body.dark-mode .user-card img {
+  filter: brightness(0.85) contrast(1.);
+}
+
+body.dark-mode .search-box,
+body.dark-mode .filter-btn,
+body.dark-mode .search-btn,
+body.dark-mode .login {
+  background: #23272f;
+  color: #e3e3e3;
+  border-color: #fc8019;
+}
+
+body.dark-mode .search-btn,
+body.dark-mode .filter-btn,
+body.dark-mode .login {
+  background: #23272f;
+  color: #fc8019;
+}
+
+body.dark-mode .search-btn:hover,
+body.dark-mode .filter-btn:hover,
+body.dark-mode .login:hover {
+  background: #fc8019;
+  color: #23272f;
+}
+
+body.dark-mode .menu ul li {
+  background: #23272f;
+  color: #e3e3e3;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .menu ul li:hover {
+  background: #131416;
+  color: #fc8019;
+}
+
+body.dark-mode .menu ul.cuisines-list li {
+  background: #08090a;
+}
+
+body.dark-mode .menu ul.menu-items-list li span {
+  color: #fc8019;
+}
+
+body.dark-mode .Shimmer-card,
+body.dark-mode .Shimmer-card::before,
+body.dark-mode .shimmer-line,
+body.dark-mode .shimmer-search-box,
+body.dark-mode .shimmer-search-btn,
+body.dark-mode .shimmer-filter-btn {
+  background: linear-gradient(90deg, #23272f 25%, #282c34 50%, #23272f 75%);
+}
+
+body.dark-mode .Shimmer-card {
+  box-shadow: 0 4px 8px rgba(40,44,63,0.18);
+}
+body.dark-mode .menu-detail{
+  color: black;
+}
+
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 18px;
+  user-select: none;
+  height: 32px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.theme-switch .slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 28px;
+  border-radius: 16px;
+  background: #94c0f1;
+  position: relative;
+  transition: background 0.3s;
+  font-size: 1.3rem;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.08);
+}
+
+.theme-switch input:checked + .slider {
+  background: #23272f;
+  color: #fc8019;
+  border: 1.5px solid #fc8019;
+}
+body.dark-mode .res-card h5:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  color: #3d9b6d;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+
+/* Add these media queries at the end of your CSS for responsiveness */
+
+/* For tablets and below */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 8px;
+  }
+  .Logo-container {
+    height: 70px;
+    justify-content: center;
+  }
+  .Logo {
+    width: 100px;
+    height: 60px;
+    margin: 0;
+  }
+  .nav-items > ul {
+    gap: 10px;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+  .filter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 8px;
+  }
+  .search {
+    width: 100%;
+    justify-content: center;
+  }
+  .search-box {
+    width: 100%;
+    min-width: 0;
+    flex: 1;
+  }
+  .search-btn {
+    width: 90px;
+    min-width: 0;
+  }
+  .filter-btn {
+    width: 100%;
+    margin: 0;
+  }
+  .res-container {
+    gap: 12px;
+    padding: 0 8px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .res-card, .user-card, .Shimmer-card {
+    width: 45vw;
+    min-width: 180px;
+    max-width: 320px;
+  }
+  .menu {
+    padding: 18px 6px;
+    max-width: 98vw;
+  }
+}
+
+/* For mobile devices */
+/* Hide desktop nav and show dropdown on mobile */
+@media (max-width: 600px) {
+  .header {
+    height: 56px;
+    padding: 0 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+  .Logo-container {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 56px;
+  }
+  .Logo {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    display: block;
+  }
+  .online-status {
+    font-size: 0.95rem;
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+  .theme-switch {
+    margin-left: 8px;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-dropdown {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fc8019;
+    cursor: pointer;
+    padding: 8px 12px;
+    height: 100%;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px #0002;
+    display: flex;
+    flex-direction: column;
+    min-width: 140px;
+    z-index: 1002;
+    margin-top: 4px;
+  }
+  .dropdown-menu a {
+    padding: 12px 18px;
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+  .dropdown-menu a:last-child {
+    border-bottom: none;
+  }
+  .dropdown-menu a:hover {
+    background: #fc8019;
+    color: #fff;
+  }
+}
+
+/* On desktop, show normal nav, hide dropdown */
+@media (min-width: 601px) {
+  .mobile-dropdown {
+    display: none !important;
+  }
+  .desktop-nav {
+    display: flex !important;
+  }
+}
+
+/* Make images responsive */
+
+
+/* Responsive font for body */
+body {
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
