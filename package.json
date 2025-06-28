@@ -28,8 +28,6 @@
   "repository": {
     "type": "git",
     "url": "Paucek-and-Lage_Burger"
-  },
-  "engines": {
-    "node": "18.x"
   }
+  
 }
